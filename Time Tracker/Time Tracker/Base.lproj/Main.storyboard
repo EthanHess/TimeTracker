@@ -34,13 +34,21 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="kLc-Yb-ard"/>
-                                    <barButtonItem title="Clock in" id="m4D-K2-TH2"/>
+                                    <barButtonItem title="Clock in" id="m4D-K2-TH2">
+                                        <connections>
+                                            <action selector="clockinButton:" destination="BYZ-38-t0r" id="gAn-Pv-EvV"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="6Jq-l9-8Pw"/>
-                                    <barButtonItem title="Clock out" id="Fu3-ly-fUI"/>
+                                    <barButtonItem title="Clock out" id="Fu3-ly-fUI">
+                                        <connections>
+                                            <action selector="clockoutButton:" destination="BYZ-38-t0r" id="qRG-8Z-w87"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VTw-Yt-ebu"/>
                                     <barButtonItem title="Report" id="bzv-BM-iTq">
                                         <connections>
-                                            <segue destination="qs5-zy-AoN" kind="show" id="hJG-Yq-ve9"/>
+                                            <action selector="reportButton:" destination="BYZ-38-t0r" id="QC4-rv-wS3"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -155,24 +163,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skb-Rb-tA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075" y="1828"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Jab-du-Z7g">
-            <objects>
-                <viewController id="qs5-zy-AoN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="S0W-ma-hkb"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Ks-sB-xfa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zmK-U3-E8L">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1dC-EV-ZnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1747" y="1828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="efL-Ik-QSJ">
