@@ -1,5 +1,5 @@
 //
-//  ListTableViewDataSource.h
+//  Entry.h
 //  Time Tracker
 //
 //  Created by Ethan Hess on 5/14/15.
@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Project.h"
-@import UIKit;
 
-@interface ListTableViewDataSource : NSObject <UITableViewDataSource>
+@interface Entry : NSObject
+
+@property (nonatomic, strong) NSDate *startTime;
+@property (nonatomic, strong) NSDate *endTime;
 
 @end

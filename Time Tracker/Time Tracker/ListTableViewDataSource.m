@@ -7,6 +7,7 @@
 //
 
 #import "ListTableViewDataSource.h"
+#import "ProjectController.h"
 
 @implementation ListTableViewDataSource
 
@@ -14,11 +15,19 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
+    Project *project = [Project new];
+    
+    cell.textLabel.text = project.title;
+    
+    
+    return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
+    return [ProjectController sharedInstance].projects.count;
     
 }
 

@@ -17,6 +17,9 @@
 		270E512E1B053F83001CDF3C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270E512D1B053F83001CDF3C /* MessageUI.framework */; };
 		270E51311B053FCC001CDF3C /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E51301B053FCC001CDF3C /* ListViewController.m */; };
 		270E51341B05405E001CDF3C /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E51331B05405E001CDF3C /* ListTableViewDataSource.m */; };
+		270E51371B0541EB001CDF3C /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E51361B0541EB001CDF3C /* Project.m */; };
+		270E513B1B0542A9001CDF3C /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E513A1B0542A9001CDF3C /* Entry.m */; };
+		270E513E1B054319001CDF3C /* ProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E513D1B054319001CDF3C /* ProjectController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,12 @@
 		270E51301B053FCC001CDF3C /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		270E51321B05405E001CDF3C /* ListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewDataSource.h; sourceTree = "<group>"; };
 		270E51331B05405E001CDF3C /* ListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewDataSource.m; sourceTree = "<group>"; };
+		270E51351B0541EB001CDF3C /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		270E51361B0541EB001CDF3C /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		270E51391B0542A9001CDF3C /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		270E513A1B0542A9001CDF3C /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		270E513C1B054319001CDF3C /* ProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectController.h; sourceTree = "<group>"; };
+		270E513D1B054319001CDF3C /* ProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +108,13 @@
 				270E51301B053FCC001CDF3C /* ListViewController.m */,
 				270E51321B05405E001CDF3C /* ListTableViewDataSource.h */,
 				270E51331B05405E001CDF3C /* ListTableViewDataSource.m */,
+				270E51381B0541F8001CDF3C /* Models */,
+				270E51391B0542A9001CDF3C /* Entry.h */,
+				270E513A1B0542A9001CDF3C /* Entry.m */,
+				270E51351B0541EB001CDF3C /* Project.h */,
+				270E51361B0541EB001CDF3C /* Project.m */,
+				270E513C1B054319001CDF3C /* ProjectController.h */,
+				270E513D1B054319001CDF3C /* ProjectController.m */,
 				270E51101B053A05001CDF3C /* Main.storyboard */,
 				270E51131B053A05001CDF3C /* Images.xcassets */,
 				270E51151B053A05001CDF3C /* LaunchScreen.xib */,
@@ -131,6 +147,13 @@
 				270E51211B053A06001CDF3C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		270E51381B0541F8001CDF3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				270E51341B05405E001CDF3C /* ListTableViewDataSource.m in Sources */,
+				270E513E1B054319001CDF3C /* ProjectController.m in Sources */,
 				270E510F1B053A05001CDF3C /* ViewController.m in Sources */,
+				270E513B1B0542A9001CDF3C /* Entry.m in Sources */,
 				270E510C1B053A05001CDF3C /* AppDelegate.m in Sources */,
+				270E51371B0541EB001CDF3C /* Project.m in Sources */,
 				270E51311B053FCC001CDF3C /* ListViewController.m in Sources */,
 				270E51091B053A05001CDF3C /* main.m in Sources */,
 			);
