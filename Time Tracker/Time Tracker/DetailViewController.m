@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Ethan Hess. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DetailViewController.h"
 
-@interface ViewController ()
+@interface DetailViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

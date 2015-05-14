@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AddEntryViewController.h
 //  Time Tracker
 //
 //  Created by Ethan Hess on 5/14/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AddEntryViewController : UIViewController
 
 @end
-

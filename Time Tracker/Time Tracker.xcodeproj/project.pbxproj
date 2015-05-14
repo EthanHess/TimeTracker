@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		270E51091B053A05001CDF3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E51081B053A05001CDF3C /* main.m */; };
 		270E510C1B053A05001CDF3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E510B1B053A05001CDF3C /* AppDelegate.m */; };
-		270E510F1B053A05001CDF3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E510E1B053A05001CDF3C /* ViewController.m */; };
+		270E510F1B053A05001CDF3C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E510E1B053A05001CDF3C /* DetailViewController.m */; };
 		270E51121B053A05001CDF3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270E51101B053A05001CDF3C /* Main.storyboard */; };
 		270E51141B053A05001CDF3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 270E51131B053A05001CDF3C /* Images.xcassets */; };
 		270E51171B053A05001CDF3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270E51151B053A05001CDF3C /* LaunchScreen.xib */; };
@@ -20,6 +20,7 @@
 		270E51371B0541EB001CDF3C /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E51361B0541EB001CDF3C /* Project.m */; };
 		270E513B1B0542A9001CDF3C /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E513A1B0542A9001CDF3C /* Entry.m */; };
 		270E513E1B054319001CDF3C /* ProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E513D1B054319001CDF3C /* ProjectController.m */; };
+		270E51411B054A59001CDF3C /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E51401B054A59001CDF3C /* AddEntryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,8 @@
 		270E51081B053A05001CDF3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		270E510A1B053A05001CDF3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		270E510B1B053A05001CDF3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		270E510D1B053A05001CDF3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		270E510E1B053A05001CDF3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		270E510D1B053A05001CDF3C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		270E510E1B053A05001CDF3C /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		270E51111B053A05001CDF3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		270E51131B053A05001CDF3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		270E51161B053A05001CDF3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -57,6 +58,8 @@
 		270E513A1B0542A9001CDF3C /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 		270E513C1B054319001CDF3C /* ProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectController.h; sourceTree = "<group>"; };
 		270E513D1B054319001CDF3C /* ProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectController.m; sourceTree = "<group>"; };
+		270E513F1B054A59001CDF3C /* AddEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEntryViewController.h; sourceTree = "<group>"; };
+		270E51401B054A59001CDF3C /* AddEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEntryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +105,14 @@
 			children = (
 				270E510A1B053A05001CDF3C /* AppDelegate.h */,
 				270E510B1B053A05001CDF3C /* AppDelegate.m */,
-				270E510D1B053A05001CDF3C /* ViewController.h */,
-				270E510E1B053A05001CDF3C /* ViewController.m */,
 				270E512F1B053FCC001CDF3C /* ListViewController.h */,
 				270E51301B053FCC001CDF3C /* ListViewController.m */,
 				270E51321B05405E001CDF3C /* ListTableViewDataSource.h */,
 				270E51331B05405E001CDF3C /* ListTableViewDataSource.m */,
+				270E510D1B053A05001CDF3C /* DetailViewController.h */,
+				270E510E1B053A05001CDF3C /* DetailViewController.m */,
+				270E513F1B054A59001CDF3C /* AddEntryViewController.h */,
+				270E51401B054A59001CDF3C /* AddEntryViewController.m */,
 				270E51381B0541F8001CDF3C /* Models */,
 				270E51391B0542A9001CDF3C /* Entry.h */,
 				270E513A1B0542A9001CDF3C /* Entry.m */,
@@ -258,8 +263,9 @@
 			files = (
 				270E51341B05405E001CDF3C /* ListTableViewDataSource.m in Sources */,
 				270E513E1B054319001CDF3C /* ProjectController.m in Sources */,
-				270E510F1B053A05001CDF3C /* ViewController.m in Sources */,
+				270E510F1B053A05001CDF3C /* DetailViewController.m in Sources */,
 				270E513B1B0542A9001CDF3C /* Entry.m in Sources */,
+				270E51411B054A59001CDF3C /* AddEntryViewController.m in Sources */,
 				270E510C1B053A05001CDF3C /* AppDelegate.m in Sources */,
 				270E51371B0541EB001CDF3C /* Project.m in Sources */,
 				270E51311B053FCC001CDF3C /* ListViewController.m in Sources */,

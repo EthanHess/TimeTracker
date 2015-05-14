@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="1268" y="1090"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Entry View Controller-->
         <scene sceneID="4hA-Or-uca">
             <objects>
-                <viewController id="o3u-cD-SqO" sceneMemberID="viewController">
+                <viewController id="o3u-cD-SqO" customClass="AddEntryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kjp-9C-dhj"/>
                         <viewControllerLayoutGuide type="bottom" id="I8C-Gc-NyE"/>
@@ -79,31 +79,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gkB-aZ-ihD">
-                                <rect key="frame" x="0.0" y="112" width="600" height="162"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gkB-aZ-ihD">
+                                <rect key="frame" x="0.0" y="157" width="600" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="453328074.238594">
                                     <!--2015-05-14 20:27:54 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="clockinPicker:" destination="o3u-cD-SqO" eventType="valueChanged" id="wgT-Gs-PoY"/>
+                                </connections>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1UA-tC-gTs">
-                                <rect key="frame" x="0.0" y="340" width="600" height="162"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1UA-tC-gTs">
+                                <rect key="frame" x="0.0" y="385" width="600" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="453328083.65263599">
                                     <!--2015-05-14 20:28:03 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="clockoutPicker:" destination="o3u-cD-SqO" eventType="valueChanged" id="mCV-kh-cls"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvj-1Q-1a1">
-                                <rect key="frame" x="16" y="83" width="63" height="21"/>
+                                <rect key="frame" x="16" y="128" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock Out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABH-Oz-rH9">
-                                <rect key="frame" x="16" y="311" width="77" height="21"/>
+                                <rect key="frame" x="16" y="356" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-WB-vW5">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-WB-vW5">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="g3D-Up-kel">
@@ -111,20 +117,42 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-xR-7Xo">
+                                <rect key="frame" x="173" y="83" width="255" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="6gq-G6-kdD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="addProjectTitleTextField:" destination="o3u-cD-SqO" eventType="editingDidEnd" id="C4m-qv-VD9"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1UA-tC-gTs" firstAttribute="leading" secondItem="gkB-aZ-ihD" secondAttribute="leading" id="337-4x-3Aj"/>
+                            <constraint firstItem="oKj-xR-7Xo" firstAttribute="top" secondItem="Kjp-9C-dhj" secondAttribute="bottom" constant="19" id="4Kx-Oz-Fhd"/>
                             <constraint firstAttribute="trailing" secondItem="1UA-tC-gTs" secondAttribute="trailing" id="Dzc-Cz-PFu"/>
+                            <constraint firstItem="mk5-WB-vW5" firstAttribute="bottom" secondItem="Kjp-9C-dhj" secondAttribute="bottom" id="Fx2-LO-5nf"/>
                             <constraint firstItem="gkB-aZ-ihD" firstAttribute="top" secondItem="jvj-1Q-1a1" secondAttribute="bottom" constant="8" symbolic="YES" id="Rtd-da-kIb"/>
                             <constraint firstItem="ABH-Oz-rH9" firstAttribute="top" secondItem="gkB-aZ-ihD" secondAttribute="bottom" constant="37" id="UEf-ZG-9ts"/>
                             <constraint firstItem="ABH-Oz-rH9" firstAttribute="leading" secondItem="mxn-Uy-xvE" secondAttribute="leadingMargin" id="YIo-8N-8fq"/>
+                            <constraint firstItem="1UA-tC-gTs" firstAttribute="leading" secondItem="mxn-Uy-xvE" secondAttribute="leading" id="Zez-Ia-43m"/>
+                            <constraint firstItem="oKj-xR-7Xo" firstAttribute="centerX" secondItem="mk5-WB-vW5" secondAttribute="centerX" id="bJC-Ad-J44"/>
                             <constraint firstItem="1UA-tC-gTs" firstAttribute="top" secondItem="ABH-Oz-rH9" secondAttribute="bottom" constant="8" symbolic="YES" id="dSM-HF-fLG"/>
-                            <constraint firstItem="jvj-1Q-1a1" firstAttribute="top" secondItem="Kjp-9C-dhj" secondAttribute="bottom" constant="19" id="gI7-qk-4Rv"/>
+                            <constraint firstItem="jvj-1Q-1a1" firstAttribute="top" secondItem="Kjp-9C-dhj" secondAttribute="bottom" constant="64" id="gI7-qk-4Rv"/>
+                            <constraint firstItem="mk5-WB-vW5" firstAttribute="trailing" secondItem="gkB-aZ-ihD" secondAttribute="trailing" id="iBa-fJ-GhO"/>
                             <constraint firstItem="gkB-aZ-ihD" firstAttribute="trailing" secondItem="1UA-tC-gTs" secondAttribute="trailing" id="nT9-vC-UgE"/>
                             <constraint firstItem="jvj-1Q-1a1" firstAttribute="leading" secondItem="ABH-Oz-rH9" secondAttribute="leading" id="t6W-Ke-yxL"/>
+                            <constraint firstItem="gkB-aZ-ihD" firstAttribute="leading" secondItem="mk5-WB-vW5" secondAttribute="leading" id="tcE-Xn-UJh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clockinLabel" destination="jvj-1Q-1a1" id="6T8-6U-aNb"/>
+                        <outlet property="clockoutLabel" destination="ABH-Oz-rH9" id="MWk-qh-tmN"/>
+                        <outlet property="projectNameTextField" destination="oKj-xR-7Xo" id="Bbk-JI-leO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skb-Rb-tA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
