@@ -30,7 +30,7 @@
                                 <items>
                                     <barButtonItem title="Add" id="d6l-FE-xLY">
                                         <connections>
-                                            <segue destination="o3u-cD-SqO" kind="show" id="1n7-Ln-biU"/>
+                                            <segue destination="o3u-cD-SqO" kind="show" id="kJ2-PM-ngg"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="kLc-Yb-ard"/>
@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="1268" y="1090"/>
         </scene>
-        <!--Add Entry View Controller-->
+        <!--Create Entry-->
         <scene sceneID="4hA-Or-uca">
             <objects>
                 <viewController id="o3u-cD-SqO" customClass="AddEntryViewController" sceneMemberID="viewController">
@@ -109,14 +109,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-WB-vW5">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="g3D-Up-kel">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dhZ-y9-Xbg"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oKj-xR-7Xo">
                                 <rect key="frame" x="173" y="83" width="255" height="30"/>
                                 <constraints>
@@ -133,21 +125,27 @@
                         <constraints>
                             <constraint firstItem="1UA-tC-gTs" firstAttribute="leading" secondItem="gkB-aZ-ihD" secondAttribute="leading" id="337-4x-3Aj"/>
                             <constraint firstItem="oKj-xR-7Xo" firstAttribute="top" secondItem="Kjp-9C-dhj" secondAttribute="bottom" constant="19" id="4Kx-Oz-Fhd"/>
+                            <constraint firstItem="oKj-xR-7Xo" firstAttribute="centerX" secondItem="gkB-aZ-ihD" secondAttribute="centerX" id="71i-2h-vfF"/>
                             <constraint firstAttribute="trailing" secondItem="1UA-tC-gTs" secondAttribute="trailing" id="Dzc-Cz-PFu"/>
-                            <constraint firstItem="mk5-WB-vW5" firstAttribute="bottom" secondItem="Kjp-9C-dhj" secondAttribute="bottom" id="Fx2-LO-5nf"/>
                             <constraint firstItem="gkB-aZ-ihD" firstAttribute="top" secondItem="jvj-1Q-1a1" secondAttribute="bottom" constant="8" symbolic="YES" id="Rtd-da-kIb"/>
                             <constraint firstItem="ABH-Oz-rH9" firstAttribute="top" secondItem="gkB-aZ-ihD" secondAttribute="bottom" constant="37" id="UEf-ZG-9ts"/>
                             <constraint firstItem="ABH-Oz-rH9" firstAttribute="leading" secondItem="mxn-Uy-xvE" secondAttribute="leadingMargin" id="YIo-8N-8fq"/>
                             <constraint firstItem="1UA-tC-gTs" firstAttribute="leading" secondItem="mxn-Uy-xvE" secondAttribute="leading" id="Zez-Ia-43m"/>
-                            <constraint firstItem="oKj-xR-7Xo" firstAttribute="centerX" secondItem="mk5-WB-vW5" secondAttribute="centerX" id="bJC-Ad-J44"/>
                             <constraint firstItem="1UA-tC-gTs" firstAttribute="top" secondItem="ABH-Oz-rH9" secondAttribute="bottom" constant="8" symbolic="YES" id="dSM-HF-fLG"/>
                             <constraint firstItem="jvj-1Q-1a1" firstAttribute="top" secondItem="Kjp-9C-dhj" secondAttribute="bottom" constant="64" id="gI7-qk-4Rv"/>
-                            <constraint firstItem="mk5-WB-vW5" firstAttribute="trailing" secondItem="gkB-aZ-ihD" secondAttribute="trailing" id="iBa-fJ-GhO"/>
                             <constraint firstItem="gkB-aZ-ihD" firstAttribute="trailing" secondItem="1UA-tC-gTs" secondAttribute="trailing" id="nT9-vC-UgE"/>
                             <constraint firstItem="jvj-1Q-1a1" firstAttribute="leading" secondItem="ABH-Oz-rH9" secondAttribute="leading" id="t6W-Ke-yxL"/>
-                            <constraint firstItem="gkB-aZ-ihD" firstAttribute="leading" secondItem="mk5-WB-vW5" secondAttribute="leading" id="tcE-Xn-UJh"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Create Entry" id="HfD-Xo-5z2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="uAe-wi-VQk">
+                            <connections>
+                                <action selector="saveButton:" destination="o3u-cD-SqO" id="g1c-nd-Ajo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="clockinLabel" destination="jvj-1Q-1a1" id="6T8-6U-aNb"/>
                         <outlet property="clockoutLabel" destination="ABH-Oz-rH9" id="MWk-qh-tmN"/>

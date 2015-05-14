@@ -19,4 +19,6 @@
 
 - (void)removeProject:(Project *)project;
 
+- (void)save;
+
 @end

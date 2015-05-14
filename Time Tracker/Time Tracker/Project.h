@@ -19,4 +19,16 @@
 
 - (void)removeEntry:(Entry *)entry;
 
+- (void)startNewEntry;
+
+- (void)endCurrentEntry;
+
+- (NSString *)projectTime;
+
+- (NSDictionary *)projectDictionary;
+
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
+- (void)save; 
+
 @end

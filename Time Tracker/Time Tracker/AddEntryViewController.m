@@ -24,6 +24,10 @@
     self.title = @"New Entry";
 }
 
+- (IBAction)saveButton:(id)sender {
+    
+}
+
 - (IBAction)addProjectTitleTextField:(id)sender {
     
 }
