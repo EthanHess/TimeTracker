@@ -8,7 +8,9 @@
 
 #import "ListViewController.h"
 
-@interface ListViewController ()
+@interface ListViewController () <UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @end
 
@@ -16,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

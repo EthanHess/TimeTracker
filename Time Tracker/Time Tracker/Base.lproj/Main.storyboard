@@ -20,6 +20,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tYI-Bz-8ck">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QVr-ic-UaM" id="Pyu-jO-i69"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YRP-Ud-iuN"/>
+                                </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dn-Gc-DNq">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -54,8 +58,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hour Keeper" id="RvE-FP-umY"/>
+                    <connections>
+                        <outlet property="tableview" destination="tYI-Bz-8ck" id="9af-iC-nZS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="QVr-ic-UaM" customClass="ListTableViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="1268" y="1090"/>
         </scene>
