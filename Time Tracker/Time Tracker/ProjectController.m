@@ -8,6 +8,8 @@
 
 #import "ProjectController.h"
 
+static NSString * const projectListKey = @"projectList";
+
 @implementation ProjectController
 
 + (ProjectController *)sharedInstance {
@@ -21,24 +23,63 @@
     
 }
 
+- (void)setProjects:(NSArray *)projects {
+    
+    self.projects = projects;
+    
+    [self save];
+}
+
 
 - (void)addProject:(Project *)project {
     
+    if (!project) {
+        
+        return;
+    }
+
+    NSMutableArray *mutableProjects = [[NSMutableArray alloc] initWithArray:self.projects];
+    [mutableProjects addObject:project];
+    
+    self.projects = mutableProjects;
     
 }
 
+
 - (void)removeProject:(Project *)project {
     
+    if (!project) {
+        
+        return;
+    }
     
+    NSMutableArray *mutableProjects = self.projects.mutableCopy;
+    [mutableProjects removeObject:project];
+    
+    self.projects = mutableProjects;
 }
 
 - (void)loadFromDefaults {
     
+    NSArray *projectDictionaries = [[NSUserDefaults standardUserDefaults] objectForKey:projectListKey];
     
+    NSMutableArray *projects = [NSMutableArray new];
+    for (NSDictionary *project in projectDictionaries) {
+        [projects addObject:[[Project alloc] initWithDictionary:project]];
+    }
+    
+    self.projects = projects;
 }
 
 - (void)save {
     
+    NSMutableArray *projects = [NSMutableArray new];
+    for (Project *project in self.projects) {
+        [projects addObject:[project projectDictionary]];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:projects forKey:projectListKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
 
