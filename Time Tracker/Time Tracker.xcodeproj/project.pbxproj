@@ -14,6 +14,8 @@
 		270E51141B053A05001CDF3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 270E51131B053A05001CDF3C /* Images.xcassets */; };
 		270E51171B053A05001CDF3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270E51151B053A05001CDF3C /* LaunchScreen.xib */; };
 		270E51231B053A06001CDF3C /* Time_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E51221B053A06001CDF3C /* Time_TrackerTests.m */; };
+		270E512E1B053F83001CDF3C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270E512D1B053F83001CDF3C /* MessageUI.framework */; };
+		270E51311B053FCC001CDF3C /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E51301B053FCC001CDF3C /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		270E511C1B053A06001CDF3C /* Time TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		270E51211B053A06001CDF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270E51221B053A06001CDF3C /* Time_TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Time_TrackerTests.m; sourceTree = "<group>"; };
+		270E512D1B053F83001CDF3C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		270E512F1B053FCC001CDF3C /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		270E51301B053FCC001CDF3C /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270E512E1B053F83001CDF3C /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		270E50FA1B053A05001CDF3C = {
 			isa = PBXGroup;
 			children = (
+				270E512D1B053F83001CDF3C /* MessageUI.framework */,
 				270E51051B053A05001CDF3C /* Time Tracker */,
 				270E511F1B053A06001CDF3C /* Time TrackerTests */,
 				270E51041B053A05001CDF3C /* Products */,
@@ -85,6 +92,8 @@
 				270E510B1B053A05001CDF3C /* AppDelegate.m */,
 				270E510D1B053A05001CDF3C /* ViewController.h */,
 				270E510E1B053A05001CDF3C /* ViewController.m */,
+				270E512F1B053FCC001CDF3C /* ListViewController.h */,
+				270E51301B053FCC001CDF3C /* ListViewController.m */,
 				270E51101B053A05001CDF3C /* Main.storyboard */,
 				270E51131B053A05001CDF3C /* Images.xcassets */,
 				270E51151B053A05001CDF3C /* LaunchScreen.xib */,
@@ -221,6 +230,7 @@
 			files = (
 				270E510F1B053A05001CDF3C /* ViewController.m in Sources */,
 				270E510C1B053A05001CDF3C /* AppDelegate.m in Sources */,
+				270E51311B053FCC001CDF3C /* ListViewController.m in Sources */,
 				270E51091B053A05001CDF3C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +428,7 @@
 				270E51281B053A06001CDF3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		270E51291B053A06001CDF3C /* Build configuration list for PBXNativeTarget "Time TrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +437,7 @@
 				270E512B1B053A06001CDF3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
